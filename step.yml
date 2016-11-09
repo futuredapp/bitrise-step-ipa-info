@@ -52,3 +52,8 @@ outputs:
       title: File path to icon
       description: |-
         File path to iOS application icon
+  - IOS_APP_PROFILE_NAME:
+    opts:
+      title: iOS application profile name
+      description: |-
+        iOS application profile name

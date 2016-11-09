@@ -34,6 +34,7 @@ workflows:
             echo "=> IOS_APP_VERSION_NAME: ${IOS_APP_VERSION_NAME}"
             echo "=> IOS_APP_VERSION_CODE: ${IOS_APP_VERSION_CODE}"
             echo "=> IOS_ICON_PATH: ${IOS_ICON_PATH}"
+            echo "=> IOS_APP_PROFILE_NAME: ${IOS_APP_PROFILE_NAME}"
 
   # ----------------------------------------------------------------
   # --- workflow to Release with auto version bump
