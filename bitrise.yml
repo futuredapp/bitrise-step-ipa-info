@@ -6,7 +6,7 @@ app:
   # define these in your .bitrise.secrets.yml
   - BITRISE_IPA_PATH: $BITRISE_IPA_PATH
   #
-  - STEP_VERSION: "1.0.0"
+  - STEP_VERSION: "1.0.1"
 
 workflows:
   # ----------------------------------------------------------------

@@ -50,7 +50,7 @@ def get_ios_ipa_info(ipa_path)
       end
     end
 
-    if icon_zip_path
+    if !icon_zip_path.empty?
       icon_file_path = "#{File.dirname(ipa_path)}/icon.png"
       ipa_zipfile.extract(icon_zip_path, icon_file_path){ override = true }
 
