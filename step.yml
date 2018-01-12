@@ -37,6 +37,11 @@ outputs:
       title: iOS application name
       description: |-
         iOS application name from IPA
+  - IOS_APP_DISPLAY_NAME:
+    opts:
+      title: iOS application display name
+      description: |-
+        iOS application display name from IPA's Info.plist
   - IOS_APP_VERSION_NAME:
     opts:
       title: iOS application version name
