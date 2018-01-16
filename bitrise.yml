@@ -6,7 +6,7 @@ app:
   # define these in your .bitrise.secrets.yml
   - BITRISE_IPA_PATH: $BITRISE_IPA_PATH
   #
-  - STEP_VERSION: "1.0.1"
+  - STEP_VERSION: "1.1.0"
 
 workflows:
   # ----------------------------------------------------------------
@@ -31,6 +31,7 @@ workflows:
             echo "=> IOS_IPA_PACKAGE_NAME: ${IOS_IPA_PACKAGE_NAME}"
             echo "=> IOS_IPA_FILE_SIZE: ${IOS_IPA_FILE_SIZE}"
             echo "=> IOS_APP_NAME: ${IOS_APP_NAME}"
+            echo "=> IOS_APP_DISPLAY_NAME: ${IOS_APP_DISPLAY_NAME}"
             echo "=> IOS_APP_VERSION_NAME: ${IOS_APP_VERSION_NAME}"
             echo "=> IOS_APP_VERSION_CODE: ${IOS_APP_VERSION_CODE}"
             echo "=> IOS_ICON_PATH: ${IOS_ICON_PATH}"
