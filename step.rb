@@ -64,6 +64,7 @@ def get_ios_ipa_info(ipa_path)
     icon_path: icon_file_path,
     app_info: {
       app_title: info_plist_content['CFBundleName'],
+      app_display_name: info_plist_content['CFBundleDisplayName'],
       bundle_id: info_plist_content['CFBundleIdentifier'],
       version: info_plist_content['CFBundleShortVersionString'],
       build_number: info_plist_content['CFBundleVersion'],
@@ -122,6 +123,7 @@ begin
     fail 'Failed to export IOS_IPA_PACKAGE_NAME' unless system("envman add --key IOS_IPA_PACKAGE_NAME --value '#{ipa_info_hsh[:app_info][:bundle_id]}'")
     fail 'Failed to export IOS_IPA_FILE_SIZE' unless system("envman add --key IOS_IPA_FILE_SIZE --value '#{ipa_info_hsh[:file_size_bytes]}'")
     fail 'Failed to export IOS_APP_NAME' unless system("envman add --key IOS_APP_NAME --value '#{ipa_info_hsh[:app_info][:app_title]}'")
+    fail 'Failed to export IOS_APP_DISPLAY_NAME' unless system("envman add --key IOS_APP_DISPLAY_NAME --value '#{ipa_info_hsh[:app_info][:app_display_name]}'")
     fail 'Failed to export IOS_APP_VERSION_NAME' unless system("envman add --key IOS_APP_VERSION_NAME --value '#{ipa_info_hsh[:app_info][:version]}'")
     fail 'Failed to export IOS_APP_VERSION_CODE' unless system("envman add --key IOS_APP_VERSION_CODE --value '#{ipa_info_hsh[:app_info][:build_number]}'")
     fail 'Failed to export IOS_ICON_PATH' unless system("envman add --key IOS_ICON_PATH --value '#{ipa_info_hsh[:icon_path]}'")
