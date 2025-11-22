@@ -6,6 +6,8 @@ set -e
 
 export BUNDLE_GEMFILE="$THIS_SCRIPT_DIR/Gemfile"
 
-bundle install --without test --jobs 20 --retry 5
+# Set bundler config instead of using deprecated `--without` flag
+bundle config set --local without "test"
+bundle install --jobs 20 --retry 5
 
 bundle exec ruby "$THIS_SCRIPT_DIR/step.rb" -a "${ipa_path}"
